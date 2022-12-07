@@ -1,5 +1,9 @@
 #!/usr/bin/python3
 def square_matrix_simple(matrix=[]):
-    if matrix is None or len(matrix) is 0 or matrix[0] is None:
-        return matrix
-    return [[i ** 2 for i in j] for j in matrix]
+    new_matrix = []
+    for row in matrix:
+        row_matrix = []
+        for element in row:
+            row_matrix.append(element**2)
+        new_matrix.append(row_matrix)
+    return new_matrix
