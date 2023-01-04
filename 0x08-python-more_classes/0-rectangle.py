@@ -1,17 +1,12 @@
 #!/usr/bin/python3
+
 """
-
-A module with a Rectangle that does nothing
-
+empty class Rectangle
 """
 
 
 class Rectangle:
     """
-
-    An empty Rectangle class
-
+    Rectangle empty class
     """
-
     pass
-
