@@ -12,21 +12,3 @@ r1.print();
 console.log('Rotate:');
 r1.rotate();
 r1.print();
-
-guillaume@ubuntu:~/0x13$ ./4-main.js
-Normal:
-XX
-XX
-XX
-Double:
-XXXX
-XXXX
-XXXX
-XXXX
-XXXX
-XXXX
-Rotate:
-XXXXXX
-XXXXXX
-XXXXXX
-XXXXXX
