@@ -17,4 +17,3 @@ fs.writeFile(file, input, (err) => {
     console.log(err);
   }
 });
-

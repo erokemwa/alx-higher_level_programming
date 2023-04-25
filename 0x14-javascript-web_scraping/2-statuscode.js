@@ -11,4 +11,3 @@ request.get(url).on('response', (response) => {
   // Check the status code of the response.
   console.log(`code: ${response.statusCode}`);
 });
-

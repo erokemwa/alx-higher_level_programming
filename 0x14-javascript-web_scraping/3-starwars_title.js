@@ -21,4 +21,3 @@ request(url, (err, res, body) => {
   // Log the title of the film.
   console.log(data.title);
 });
-
