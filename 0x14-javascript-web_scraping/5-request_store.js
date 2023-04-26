@@ -1,19 +1,17 @@
 #!/usr/bin/node
 
-// Import the `fs` module. The `fs` module provides functions for working with files.
+// Import the `request` and `fs` modules. The `request` module provides functions for making HTTP requests. The `fs` module provides functions for working with files.
+const request = require('request');
 const fs = require('fs');
 
-// Import the `request` module. The `request` module provides functions for making HTTP requests.
-const request = require('request');
-
-// Get the URL from the command line arguments.
+// The URL to request.
 const url = process.argv[2];
 
-// Get the file path from the command line arguments.
-const filePath = process.argv[3];
+// The file to write the response body to.
+const filename = process.argv[3];
 
 // Make an HTTP GET request to the URL.
-request(url, (err, res, body) => {
+request(url, function (err, res, body) {
   // Check if there was an error.
   if (err) {
     // If there was an error, log it to the console and exit.
@@ -21,16 +19,11 @@ request(url, (err, res, body) => {
     return;
   }
 
-  // Write the body of the response to the file in the UTF-8 encoding.
-  fs.writeFile(filePath, body, 'utf-8', (err) => {
-    // Check if there was an error.
+  // Write the response body to the file.
+  fs.writeFile(filename, body, 'utf8', function (err) {
     if (err) {
-      // If there was an error, log it to the console and exit.
+      // If there was an error, log it to the console.
       console.log(err);
-      return;
     }
-
-    // The file has been written successfully.
-    console.log(`File ${filePath} has been written successfully.`);
   });
 });
